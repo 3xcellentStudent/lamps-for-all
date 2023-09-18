@@ -5,6 +5,8 @@
 /next
 /.pnp
 .pnp.js
+product.json
+m.js
 
 # testing
 /coverage

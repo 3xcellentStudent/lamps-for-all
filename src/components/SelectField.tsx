@@ -5,11 +5,12 @@ interface Props {
   items: []
   label: string
   minWidth: number
+  cls: string
 }
 
 interface Item {value: string, text: string}
 
-export default function SelectField({items, label, minWidth}: Props){
+export default function SelectField({items, label, minWidth, cls}: Props){
 
   const [state, setState] = useState('');
 
@@ -19,7 +20,7 @@ export default function SelectField({items, label, minWidth}: Props){
 
   return(
     <Box sx={{ minWidth }}>
-      <FormControl fullWidth>
+      <FormControl className={cls} fullWidth>
         <InputLabel id="demo-simple-select-label">{label}</InputLabel>
         <Select
           labelId="demo-simple-select-label"
